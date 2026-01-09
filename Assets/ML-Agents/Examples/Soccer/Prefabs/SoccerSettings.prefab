@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9040111743837888286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740965977042147563}
+  - component: {fileID: 3415802422197676111}
+  - component: {fileID: 961124386277244002}
+  m_Layer: 0
+  m_Name: SoccerSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &740965977042147563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040111743837888286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.4222019, y: 1.6498566, z: -23.95529}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3415802422197676111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040111743837888286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c32d32dfa994d14a009cc1f393c634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purpleMaterial: {fileID: 2100000, guid: 9a86af15082dd70478b81cd7c5425d3f, type: 2}
+  blueMaterial: {fileID: 2100000, guid: 5ef8e20b733fa6c4eb8a004e8c6f9168, type: 2}
+  randomizePlayersTeamForTraining: 0
+  agentRunSpeed: 2
+--- !u!114 &961124386277244002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040111743837888286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e77b6b56d211149aac8a55836545bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityMultiplier: 1
+  fixedDeltaTime: 0.02
+  maximumDeltaTime: 0.33333334
+  solverIterations: 6
+  solverVelocityIterations: 1
+  reuseCollisionCallbacks: 1
