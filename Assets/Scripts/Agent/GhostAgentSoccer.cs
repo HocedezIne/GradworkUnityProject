@@ -11,12 +11,12 @@ public class GhostAgentSoccer : AgentSoccer
 {
     [SerializeField] Transform primaryAgent;
 
-    [HideInInspector] public ActionSegment<float> LastConinuousActions {  get; private set; }
+    [HideInInspector] public ActionSegment<float> LastContinuousActions {  get; private set; }
 
     public override void Initialize()
     {
         float[] emptyActions = new float[3];
-        LastConinuousActions = new ActionSegment<float>(emptyActions, 0, 3);
+        LastContinuousActions = new ActionSegment<float>(emptyActions, 0, 3);
 
         m_BehaviorParameters = gameObject.GetComponent<BehaviorParameters>();
         if (m_BehaviorParameters.TeamId == (int)Team.Blue)
@@ -33,7 +33,7 @@ public class GhostAgentSoccer : AgentSoccer
     {
         if (m_IsPaused) return;
 
-        LastConinuousActions = actions.ContinuousActions;
+        LastContinuousActions = actions.ContinuousActions;
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

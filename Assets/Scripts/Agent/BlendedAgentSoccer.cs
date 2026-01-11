@@ -23,14 +23,14 @@ public class BlendedAgentSoccer : AgentSoccer
     {
         if (m_IsPaused) return;
 
-        ActionSegment<float> ghostActions = m_GhostAgent.LastConinuousActions;
+        ActionSegment<float> ghostActions = m_GhostAgent.LastContinuousActions;
         float[] ContinuousOut = new float[actionBuffers.ContinuousActions.Length];
 
         for(int i = 0; i < actionBuffers.ContinuousActions.Length; i++)
         {
             var primaryWeighted = m_BlendWeight * actionBuffers.ContinuousActions[i];
             var ghostWeighted = (1- m_BlendWeight) * ghostActions[i];
-            ContinuousOut[i] = primaryWeighted + ghostWeighted;
+            ContinuousOut[i] = Mathf.Clamp(primaryWeighted + ghostWeighted, -1f, 1f);
         }
 
         MoveAgent(new ActionSegment<float>(ContinuousOut, 0, 3));

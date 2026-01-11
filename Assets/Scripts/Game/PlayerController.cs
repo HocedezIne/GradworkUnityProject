@@ -23,17 +23,17 @@ public class PlayerController : MonoBehaviour
         if (context.performed) ++m_InputEvents;
     }
 
+    public void ResetInputLogging()
+    {
+        m_InputEvents = 0;
+    }
+
     private void Update()
     {
         forwardValue = move.y;
         rightValue = move.x;
 
-        forwardAxis = move.y > 0.1f ? 1 : move.y < -0.1f ? 2 : 0;
-        rightAxis = move.x > 0.1f ? 1 : move.x < -0.1f ? 2 : 0;
-    }
-
-    public void ResetInputLogging()
-    {
-        m_InputEvents = 0;
+        //forwardAxis = move.y > 0.1f ? 1 : move.y < -0.1f ? 2 : 0;
+        //rightAxis = move.x > 0.1f ? 1 : move.x < -0.1f ? 2 : 0;
     }
 }
